@@ -47,9 +47,9 @@ class buss_api(DefinitionBase):
         for i in xrange(len(ns)):
             if ns[i] != 0:
                 product = {'bank_name': products[i]['bank_name'], 'ID': products[i]['ID'], 'url': products[i]['url'],
-                           'day': (ns[i] * c[i]),'product_name':products[i]['product_name']}
+                           'day': (ns[i] * c[i]), 'product_name': products[i]['product_name']}
                 result.append(product)
-        result = {'plan_details': result, 'income': save[-1][-1]}
+        result = {'plan_details': result, 'income': round(save[-1][-1], 2)}
         return json.dumps(result)
 
 
