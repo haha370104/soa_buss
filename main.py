@@ -8,7 +8,7 @@ import requests
 import json
 import backpack
 
-server_url = 'http://127.0.0.1:8080'
+server_url = 'http://115.28.206.58:8080'
 
 
 class buss_api(DefinitionBase):
