@@ -59,7 +59,7 @@ if __name__ == '__main__':
 
         soap_application = soaplib.core.Application([buss_api], 'tns')
         wsgi_application = wsgi.Application(soap_application)
-        server = make_server('localhost', 7789, wsgi_application)
+        server = make_server('0.0.0.0', 7789, wsgi_application)
         server.serve_forever()
     except ImportError:
         print("Error: example server code requires Python >= 2.5")
